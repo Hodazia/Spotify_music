@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar';
 import Display from './components/Display';
 import Player from './components/Player';
-
+import  {PlayerContext} from './Context/PlayerContext';
 
 function App() {
     const {audioRef,track} = useContext(PlayerContext)
