@@ -7,11 +7,12 @@ const AlbumItem = ({image, name, description, id}) => {
     const navigate = useNavigate();
 
     return (
-        // whenver we click on the albumitem it gets navigated to its album id , 
-        <div className='min-w-[1080px] p-2 px-3 rounded cursor-pointer hover:bg-[#ffffff]' onClick={ () => navigate(`/album/${id}`)}>
-            <img className="rounded" src={image}/>
-            <p className="font-bold mt-2 mb-1">{name}</p>
-            <p className="text-slate-200 text-sm">{description}</p>
+        <div className='min-w-[200px] max-w-[220px] p-3 rounded-xl cursor-pointer bg-[#181818] 
+        hover:shadow-2xl hover:scale-105 hover:border hover:border-green-500 transition-all duration-200 
+        flex flex-col items-center mr-4' onClick={ () => navigate(`/album/${id}`)}>
+            <img className="rounded-lg w-full aspect-square object-cover mb-3 shadow" src={image}/>
+            <p className="font-bold mt-2 mb-1 text-white text-center truncate w-full">{name}</p>
+            <p className="text-slate-300 text-sm text-center truncate w-full">{description}</p>
         </div>
     )
 

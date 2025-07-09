@@ -33,13 +33,13 @@ function DisplayAlbum() {
     </div>
     <br />
     {songsData.map((item,index)=>(
-      <div onClick={()=>playWithId(item.id)} key={index} className="grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7]">
-        <p className="text-white">
-          <b className="mr-4 text-[#a7a7a7]">{index+1}</b>
-          <img className='inline w-10 mr-5' src={item.image} alt="" />
-          {item.name}
+      <div onClick={()=>playWithId(item.id)} key={index} className="grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center text-[#a7a7a7] rounded-lg hover:bg-[#232323] hover:text-white hover:shadow transition-all duration-150 cursor-pointer mb-2">
+        <p className="text-white flex items-center gap-3">
+          <b className="mr-2 text-[#a7a7a7]">{index+1}</b>
+          <img className='inline w-10 mr-3 rounded' src={item.image} alt="" />
+          <span className="truncate max-w-[120px]">{item.name}</span>
         </p>
-        <p className="text-[15px]">{albumData.name}</p>
+        <p className="text-[15px] truncate max-w-[120px]">{albumData.name}</p>
         <p className="text-[15px] hidden sm:block">5 days ago</p>
         <p className="text-[15px] text-center">{item.duration}</p>
       </div>
